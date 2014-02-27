@@ -9,6 +9,8 @@ public class PercentDiscount implements DiscountStrategy {
     private double percent;
     private double productCost;
     private double qty;
+    
+            
 
     public PercentDiscount(double percent) {
         setPercent(percent);
@@ -22,22 +24,18 @@ public class PercentDiscount implements DiscountStrategy {
         this.percent = percent;
     }
 
-    @Override
     public double getProductCost() {
         return productCost;
     }
 
-    @Override
     public void setProductCost(double productCost) {
         this.productCost = productCost;
     }
 
-    @Override
     public double getQty() {
         return qty;
     }
 
-    @Override
     public void setQty(double qty) {
         this.qty = qty;
     }
@@ -54,9 +52,4 @@ public class PercentDiscount implements DiscountStrategy {
 
     }
 
-//    public static void main(String[] args) {
-//        PercentDiscount dis = new PercentDiscount();
-//        double discountPercent = dis.getDiscount(100.00, 2);
-//        System.out.println(discountPercent);
-//    }
 }
