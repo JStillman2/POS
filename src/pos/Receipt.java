@@ -16,6 +16,8 @@ public class Receipt {
     FakeDatabase jay = new FakeDatabase();
     private final String storeName = "Kohl's";
     LineItem line = new LineItem();
+    
+   
 
     public double calculateTax(String productId) {
         return jay.findProduct(productId).getProductCost() * taxRate;
@@ -40,8 +42,6 @@ public class Receipt {
     public void setTaxRate(double taxRate) {
         this.taxRate = taxRate;
     }
-
-    DiscountStrategy discount;
 
     public void outputReceipt(String productId) {
         System.out.println("Thank you for shopping at " + storeName
