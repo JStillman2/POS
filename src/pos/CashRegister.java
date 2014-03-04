@@ -15,8 +15,6 @@ public class CashRegister {
     public void ScanItem(String productID, double qty) {
         jay.findProduct(productID);
         line.setQuantity(qty);
-        
-     
 }
     
      public void printReceipt(String productID) {

@@ -8,9 +8,6 @@ public class PercentDiscount implements DiscountStrategy {
 
     private double percent;
     private double productCost;
-   
-    
-            
 
     public PercentDiscount(double percent) {
         setPercent(percent);
@@ -40,7 +37,7 @@ public class PercentDiscount implements DiscountStrategy {
     }
 
     @Override
-    public double getDiscountTotal(double productCost, double qty) {
+    public double getDiscountedTotal(double productCost, double qty) {
         return productCost * qty - getDiscount(productCost, qty);
 
     }

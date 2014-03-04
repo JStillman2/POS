@@ -10,7 +10,9 @@ package pos;
  * @author Jay
  */
 public class Receipt {
-
+    
+    
+    private double grandSubTotal;
     private double grandTotal;
     private double taxRate = .056;
     FakeDatabase jay = new FakeDatabase();
@@ -31,9 +33,6 @@ public class Receipt {
         return grandTotal;
     }
 
-    public void setGrandTotal(double grandTotal) {
-        this.grandTotal = grandTotal;
-    }
 
     public double getTaxRate() {
         return taxRate;
@@ -54,4 +53,12 @@ public class Receipt {
                 + jay.findProduct(productId).getDiscountTotal(jay.findProduct(productId).getProductCost(), line.getQuantity()));
     }
 
+    
+//    private void addToArray(final LineItem item) {
+//        // needs validation
+//        LineItem[] tempItems = new LineItem[lineItems.length + 1];
+//        System.arraycopy(lineItems, 0, tempItems, 0, lineItems.length);
+//        tempItems[lineItems.length] = item;
+//        lineItems = tempItems;
+//    }
 }

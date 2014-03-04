@@ -8,7 +8,7 @@ public class FakeDatabase {
     
     private Customer[] customers = {
         new Customer("Agent J"),
-        new Customer("Angent K"),
+        new Customer("Agent K"),
         new Customer("Neo"),
         new Customer("James Bond"),
         new Customer("Austin Powers")

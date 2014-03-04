@@ -18,8 +18,7 @@ public class Product {
         setDiscountStrategy(discountStrategy);
 
     }
-    
-    
+  
 
     public DiscountStrategy getDiscountStrategy() {
         return discountStrategy;
@@ -58,7 +57,7 @@ public class Product {
     }
 
     public double getDiscountTotal(double productCost, double quantity) {
-        return discountStrategy.getDiscountTotal(productCost, quantity);
+        return discountStrategy.getDiscountedTotal(productCost, quantity);
     }   
 
 }
