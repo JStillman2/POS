@@ -22,9 +22,6 @@ public class QtyFlatRateDiscount implements DiscountStrategy {
         this.amountOff = amountOff;
     }
 
-    
-   
-
     public double getMinQty() {
         return minQty;
     }

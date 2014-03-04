@@ -35,8 +35,8 @@ public class StartUp {
 //    }
         
         CashRegister register = new CashRegister();
-        register.ScanItem("J87S", 2);
-        register.printReceipt("J87S");
+        register.ScanItem("P90X", 2);
+        register.printReceipt("P90X");
 
     }
 
