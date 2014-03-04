@@ -6,16 +6,24 @@ package pos;
  */
 public class QtyFlatRateDiscount implements DiscountStrategy {
 
-    private double productCost;
-    private double minQty;
+    private double amountOff;
+    private double minQty = 4;
 
-    public double getProductCost() {
-        return productCost;
+    public QtyFlatRateDiscount(double amountOff) {
+        this.amountOff = amountOff;
+        
     }
 
-    public void setProductCost(double productCost) {
-        this.productCost = productCost;
+    public double getAmountOff() {
+        return amountOff;
     }
+
+    public void setAmountOff(double amountOff) {
+        this.amountOff = amountOff;
+    }
+
+    
+   
 
     public double getMinQty() {
         return minQty;
@@ -25,20 +33,21 @@ public class QtyFlatRateDiscount implements DiscountStrategy {
         this.minQty = minQty;
     }
 
+    @Override
     public double getDiscount(double productCost, double qty) {
 
-        if (qty >= 6) {
+        if (qty >= minQty) {
             return (productCost * qty) - productCost;
         } else {
 
-            return 0;
+            return (productCost * qty);
 
         }
     }
 
     @Override
     public double getDiscountTotal(double productCost, double qty) {
-        if (qty >= 6) {
+        if (qty >= minQty) {
             return (productCost * qty) - productCost;
         } else {
 

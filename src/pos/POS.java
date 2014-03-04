@@ -27,7 +27,7 @@ public class POS {
 //        double discountOff2 = money2.getDiscountTotal(100.00, 2);
 //        System.out.println(discountOff2);
         
-        
+        Product test = new Product("J101", "Socks", 5.0, new FlatRateDiscount(2));
         FlatRateDiscount flat = new FlatRateDiscount(2);
         double dis = flat.getDiscountTotal(5.0, 2);
         System.out.println(dis);

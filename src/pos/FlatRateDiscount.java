@@ -7,7 +7,6 @@ package pos;
 public class FlatRateDiscount implements DiscountStrategy {
 
     private double amountOff;
-
     private double qty;
 
     public FlatRateDiscount(double amountOff) {

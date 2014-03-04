@@ -20,7 +20,7 @@ public class PercentDiscount implements DiscountStrategy {
         return percent;
     }
 
-    public void setPercent(double percent) {
+    public final void setPercent(double percent) {
         this.percent = percent;
     }
 

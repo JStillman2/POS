@@ -4,30 +4,28 @@ package pos;
  *
  * @author Jay
  */
-public class Merchandise {
-    
+public class Product {
+
     private String productId;
     private String productName;
     private double productCost;
     private DiscountStrategy discountStrategy;
 
-    public Merchandise(String productId, String productName, double productCost, DiscountStrategy discountStrategy) {
+    public Product(String productId, String productName, double productCost, DiscountStrategy discountStrategy) {
         setProductId(productId);
         setProductName(productName);
         setProductCost(productCost);
         setDiscountStrategy(discountStrategy);
-        
+
     }
 
     public DiscountStrategy getDiscountStrategy() {
         return discountStrategy;
     }
 
-    public void setDiscountStrategy(DiscountStrategy discountStrategy) {
+    public final void setDiscountStrategy(DiscountStrategy discountStrategy) {
         this.discountStrategy = discountStrategy;
     }
-    
-    
 
     public String getProductId() {
         return productId;
@@ -52,8 +50,5 @@ public class Merchandise {
     public final void setProductCost(final double productCost) {
         this.productCost = productCost;
     }
-    
-    
-    
-    
+
 }
