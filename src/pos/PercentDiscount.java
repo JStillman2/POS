@@ -8,7 +8,7 @@ public class PercentDiscount implements DiscountStrategy {
 
     private double percent;
     private double productCost;
-    private double qty;
+   
     
             
 
@@ -32,13 +32,6 @@ public class PercentDiscount implements DiscountStrategy {
         this.productCost = productCost;
     }
 
-    public double getQty() {
-        return qty;
-    }
-
-    public void setQty(double qty) {
-        this.qty = qty;
-    }
 
     @Override
     public double getDiscount(double productCost, double qty) {

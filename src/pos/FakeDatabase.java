@@ -28,7 +28,7 @@ public class FakeDatabase {
             System.out.println("Enter a valid product ID.");
         } else {
             for (Product p : products) {
-                if (productId.equals(p.getProductID())) {
+                if (productId.equals(p.getProductId())) {
                     product = p;
                     break;
                 }

@@ -7,7 +7,7 @@ package pos;
 public class FlatRateDiscount implements DiscountStrategy {
 
     private double amountOff;
-    private double qty;
+    
 
     public FlatRateDiscount(double amountOff) {
         setAmountOff(amountOff);
@@ -22,13 +22,7 @@ public class FlatRateDiscount implements DiscountStrategy {
         this.amountOff = amountOff;
     }
 
-    public double getQty() {
-        return qty;
-    }
 
-    public void setQty(double qty) {
-        this.qty = qty;
-    }
 
     @Override
     public double getDiscount(double productCost, double qty) {

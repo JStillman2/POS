@@ -12,43 +12,23 @@ package pos;
  */
 public class Receipt {
     
-    private double receiptNumber = 0;    
-    private double subTotal;
-    private double salesTax;
-    private double grandTotal;
+    FakeDatabase db = new FakeDatabase();
+    private final String storeName = "Kohl's";
+    LineItem line = new LineItem();    
 
-    public double getReceiptNumber() {
-        return receiptNumber;
-    }
-
-    public void setReceiptNumber(double receiptNumber) {
-        this.receiptNumber = receiptNumber;
-    }
-
-    public double getSubTotal() {
-        return subTotal;
-    }
-
-    public void setSubTotal(double subTotal) {
-        this.subTotal = subTotal;
-    }
-
-    public double getSalesTax() {
-        return salesTax;
-    }
-
-    public void setSalesTax(double salesTax) {
-        this.salesTax = salesTax;
-    }
-
-    public double getGrandTotal() {
-        return grandTotal;
-    }
-
-    public void setGrandTotal(double grandTotal) {
-        this.grandTotal = grandTotal;
+    
+    DiscountStrategy discount;
+    public void outputReceipt(String productId) {
+        System.out.println("Thank you for shopping at " + storeName
+                            + "\n\nID   Item    Price   Qty     Subtotal   Discount\n"
+                            + db.findProduct(productId).getProductId() + "    "
+                            + db.findProduct(productId).getProductName() +  "    "
+                            + db.findProduct(productId).getProductCost() + "       "
+                            + line.getQuantity()+ "     "
+                            + line.calculateGrandTotal(productId) + "         "
+                            + db.findProduct(productId).getDiscountTotal(db.findProduct(productId).getProductCost(), line.getQuantity()));
     }
     
-    
+
     
 }
