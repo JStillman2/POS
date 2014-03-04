@@ -53,11 +53,11 @@ public class Product {
         this.productCost = productCost;
     }
 
-    double getDiscountAmount(double price, double quantity) {
+    public double getDiscountAmount(double price, double quantity) {
         return discountStrategy.getDiscount(price, quantity);
     }
 
-    double getDiscountTotal(double price, double quantity) {
+    public double getDiscountTotal(double price, double quantity) {
         return discountStrategy.getDiscountTotal(price, quantity);
     }   
 
