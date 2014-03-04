@@ -45,7 +45,7 @@ public class QtyFlatRateDiscount implements DiscountStrategy {
     @Override
     public double getDiscountTotal(double productCost, double qty) {
         if (qty >= minQty) {
-            return (productCost * qty) - productCost;
+            return (productCost * qty) - getDiscount(productCost, qty);
         } else {
 
             return productCost * qty;
